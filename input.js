@@ -1,12 +1,16 @@
+const { read } = require('fs');
 const readline = require('readline');
 
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+const r1 =readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
 
-rl.question('Masukkan nama Anda: ', (nama) => {
-  console.log(`Halo, ${nama}!`);
-  rl.close();
+r1.question('Masukkan Nama:', (nama) => {
+r1.question('Masukkan Umur:', (umur) => {
+
+console.log(`Namamu adalah ${nama}`);
+console.log(`umurmu ${umur}`);
+r1.close();
+});
 });
